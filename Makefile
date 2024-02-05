@@ -14,7 +14,7 @@ ${BPF_OBJECTS}: ${BPF_SOURCE}
 
 build: generate ${EXECUTABLE}
 
-${EXECUTABLE}: ${GO_SRC}
+${EXECUTABLE}: ${GO_SRC} ${BPF_OBJECTS}
 	go build .
 
 run: build
